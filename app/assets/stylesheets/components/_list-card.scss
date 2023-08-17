@@ -1,0 +1,11 @@
+.list-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 45;
+}
+
+.list-card {
+  background-color: grey;
+  box-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+}

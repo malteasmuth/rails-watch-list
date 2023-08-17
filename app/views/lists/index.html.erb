@@ -1,5 +1,18 @@
-<p>Find me in app/views/lists/index.html.erb</p>
-
-<% @lists.each do |list|%>
-  <h2><%= list.name %><h2>
-<% end%>
+<div class="container">
+  <nav class="navbar navbar-lewagon .navbar-collapse">
+    <div class="container-fluid d-flex">
+      <%= link_to "Add list", new_list_path, class: "btn btn-primary"%>
+      <%= link_to "Delete list", root_path, class:"btn btn-danger"%>
+    </div>
+  </nav>
+  <div>
+    <div class="list-div container">
+      <% @lists.each do |list|%>
+        <div class="list-card">
+          <h2><%= list.name %><h2>
+          <%= link_to "See more", list_path(list)%>
+        <% end%>
+      </div>
+    </div>
+  </div>
+</div>

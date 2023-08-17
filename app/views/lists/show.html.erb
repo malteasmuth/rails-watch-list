@@ -1,2 +1,9 @@
 <h1>Lists#show</h1>
 <p>Find me in app/views/lists/show.html.erb</p>
+
+<h2>This is your list: <%= @list.name %><h2>
+<%= @list %>
+<%= link_to "back", root_path, class: "btn btn-primary"%>
+
+<%= link_to "add Bookmark", new_list_bookmark_path(@list), class: "btn btn-primary"%>
+
