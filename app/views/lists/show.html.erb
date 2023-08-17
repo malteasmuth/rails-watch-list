@@ -5,5 +5,9 @@
 <%= @list %>
 <%= link_to "back", root_path, class: "btn btn-primary"%>
 
-<%= link_to "add Bookmark", new_list_bookmark_path(@list), class: "btn btn-primary"%>
 
+<% @list.bookmarks.each do |bookmark| %>
+  <%= link_to "delete Bookmark", bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"%>
+<% end  %>
+
+<%= link_to "add Bookmark", new_list_bookmark_path(@list), class: "btn btn-primary"%>

@@ -6,6 +6,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -14,9 +15,11 @@ class ListsController < ApplicationController
 
   def create
     @list = List.create(list_params)
-    @list.save
-
-    redirect_to list_path(@list)
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
