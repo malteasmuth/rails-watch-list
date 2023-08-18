@@ -1,11 +1,22 @@
 .list-div {
+  background-color: #353644;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 45;
+  padding: 10px;
 }
 
 .list-card {
-  background-color: grey;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  height: 350px;
+  width: 350px;
+  background-color: rgb(170, 161, 161);
   box-shadow: 1px 1px 1px black;
   border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 5px;
 }

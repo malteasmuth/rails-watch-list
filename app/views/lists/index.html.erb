@@ -1,18 +1,23 @@
-<div class="container">
   <nav class="navbar navbar-lewagon .navbar-collapse">
     <div class="container-fluid d-flex">
       <%= link_to "Add list", new_list_path, class: "btn btn-primary"%>
       <%= link_to "Delete list", root_path, class:"btn btn-danger"%>
     </div>
   </nav>
-  <div>
-    <div class="list-div container">
+  <div class="banner-home" style="background-image: linear-gradient(rgba(0,0,0, 0.1),rgba(0,0,0, 0.1)), url(<%= asset_path('list_background.jpg')%>)">
+  <h1>All your favorite movies in one place</h1>
+  <h2>Enjoy the journey</h2>
+  </div>
+  <div class="">
+    <div class="list-div">
       <% @lists.each do |list|%>
-        <div class="list-card">
-          <h2><%= list.name %><h2>
-          <%= link_to "See more", list_path(list)%>
+        <div class="list-card"><h2><%= list.name %></h2>
+          <%= link_to "See more", list_path(list), class:"btn btn-dark" %>
+        </div>
         <% end%>
       </div>
     </div>
   </div>
-</div>
+  <div class="footer">
+  <h3>end of the page</h3>
+  </div>
